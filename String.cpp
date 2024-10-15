@@ -82,7 +82,6 @@ String::String(String&& ref)
 }
 String& String::operator=(const String& ref)
 {
-	cout << "\nCopy\n";
 	if (this == &ref)
 	{
 		return *this;
@@ -95,7 +94,6 @@ String& String::operator=(const String& ref)
 }
 String& String::operator=(String&& ref)
 {
-	cout << "\nMove\n";
 	if (ref.data == nullptr || this == &ref)
 	{
 		return *this;
@@ -579,33 +577,6 @@ String& String::operator = (const long long int num)
 	}
 	return str;
 }
-//String& String::operator = (const double num)
-//{
-//	double value;
-//	double digit = 0;
-//	int i = 0;
-//	String str;
-//	str.size = getNumLength(num) + 1;
-//	str.data = new char[str.size];
-//	while (data[i] != '.')
-//	{
-//		if ((data[i] >= '0' && data[i] <= '9'))
-//		{
-//			value = data[i] - 48;
-//			num = num * 10 + ((float)value);
-//		}
-//		i++;
-//	}
-//	i++;
-//	float j = 0.1;
-//	for (i; i < getLength(); i++)
-//	{
-//		value = data[i] - 48;
-//		num = num + ((float)value) * j;
-//		j = j / 10;
-//	}
-//	return num;
-//}
 String::operator long long int()const
 {
 	int i = 0, digit, sign = 1;
