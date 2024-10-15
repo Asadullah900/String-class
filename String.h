@@ -50,7 +50,6 @@ public:
 	String operator + (const String& s2) const;
 	void operator += (const String& s2);
 	String& operator = (const long long int num);
-	String& operator = (const double num);
 	explicit operator long long int()const;
 	explicit operator double()const;
 	explicit operator bool()const;
